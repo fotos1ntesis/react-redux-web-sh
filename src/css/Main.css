@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+:root {
+  --bg-color: #f6f6f6;
+  --header-text-color: #424242;
+  --header-bg-color: #e7effc;
+  --header-search-button-color: #3669d6;
+  --header-button-color: #a1b8e8;
+  --header-button-f-color: #e89999;
+  --white-color: #ffff;
+  --black-color: #0000;
+  --card-button-color: #3161df;
+  --card-button-active-color: #1040b9;
+  --price-color: #abb7c3;
+  --discount-color: #2a5ad5;
+  --category-bg-color: #ebf0f8;
+  --active-category-color: #2855c8;
+  --active-button-f-color: #f45e5e;
+  --counter-color: #f7f7f7;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}

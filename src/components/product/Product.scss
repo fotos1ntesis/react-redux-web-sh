@@ -1,0 +1,78 @@
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+
+    .product {
+      position: relative;
+      justify-content: space-between;
+      margin: 5.5px 5.5px 0 5.5px;
+      width: 245px;
+      background-color: var(--white-color);
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+      padding: 0 0.8rem 0.8rem;
+      border-radius: 0.2rem;
+
+      .card-button {
+        background: var(--card-button-color);
+        color: var(--white-color);
+        padding: 12px 35px;
+        border-radius: 0.2rem;
+        font-weight: 500;
+        font-size: 0.8rem;
+        width: 100%;
+      }
+
+      .price {
+        display: flex;
+        gap: 6px;
+        font-weight: 500;
+        font-size: 0.8rem;
+
+        .price_ {
+          color: var(--price-color);
+        }
+
+        .discount {
+          color: var(--discount-color);
+        }
+      }
+
+      .rating {
+        font-size: 0.9rem;
+        font-weight: 500;
+        display: flex;
+        gap: 1px;
+      }
+
+      p {
+        font-size: 0.8rem;
+        color: var(--header-text-color);
+      }
+    }
+  }
+}
+
+.button-favorite {
+  position: absolute;
+  color: var(--header-button-f-color);
+  cursor: pointer;
+  top: 8px;
+  right: 5px;
+  z-index: 5;
+  transition: all 500ms ease;
+}
+
+.button-favorite-active {
+  color: var(--active-button-f-color);
+  position: absolute;
+  cursor: pointer;
+  top: 8px;
+  right: 5px;
+  z-index: 5;
+  transition: all 500ms ease;
+}
