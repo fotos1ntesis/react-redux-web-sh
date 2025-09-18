@@ -1,6 +1,6 @@
+import style from "./index.module.scss";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import "./../../css/CartItems.css";
 import { deleteFromCart, updateProductCart } from "./slices";
 import ButtonFavoriteCartPage from "../../components/buttonFavoriteCartPage";
 
@@ -20,41 +20,41 @@ export default function CartItem({ product }) {
   };
 
   return (
-    <div className="cart-item">
-      <Link to={`/product/${id}`} className="linkcart">
+    <div className={style.product}>
+      <Link to={`/product/${id}`} className={style.link}>
         <img width={125} src={img} alt={name} />
       </Link>
-      <div className="info-block">
-        <Link to={`/product/${id}`} className="linkcart">
+      <div className={style.productBlock}>
+        <Link to={`/product/${id}`} className={style.link}>
           <h4>{name}</h4>
-          <p>{description}</p>
+          <p className={style.description}>{description}</p>
 
-          <div className="rating">
+          <div className={style.rating}>
             <i className="bx bxs-star" style={{ color: "orange" }}></i>
             {rating}
           </div>
         </Link>
-        <div className="buttons-cart">
+        <div className={style.button}>
           <ButtonFavoriteCartPage product={product} />
           <button
             onClick={() => dispatch(deleteFromCart(product.id))}
-            className="trash"
+            className={style.trash}
           >
             <i className="bx bx-trash bx-xs"></i>
           </button>
         </div>
       </div>
-      <div className="quantity">
+      <div className={style.quantity}>
         <button onClick={handleChangeMinusQuantity}>
           <i className="bx bx-minus bx-xs"></i>
         </button>
-        <span>{quantity}</span>
+        <span className={style.count}>{quantity}</span>
         <button onClick={handleChangePlusQuantity}>
           <i class="bx bx-plus bx-xs"></i>
         </button>
       </div>
-      <div className="price">
-        <span className="discount">${discount * quantity}</span>
+      <div className={style.price}>
+        <span className={style.discount}>${discount * quantity}</span>
       </div>
     </div>
   );

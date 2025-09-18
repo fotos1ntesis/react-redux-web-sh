@@ -1,6 +1,7 @@
 import React from "react";
 import { addToCart, deleteFromCart } from "../../pages/cart/slices";
 import { useDispatch, useSelector } from "react-redux";
+import { Button } from "antd";
 
 export default function ButtonCart({ product }) {
   const dispatch = useDispatch();
@@ -17,11 +18,28 @@ export default function ButtonCart({ product }) {
   };
 
   return (
-    <button
-      onClick={() => onClickCart(product)}
-      className={isCartProduct ? "card-button-page-active" : "card-button-page"}
-    >
-      {isCartProduct ? "Remove from Cart" : "Add To Cart"}
-    </button>
+    <>
+      {isCartProduct ? (
+        <Button
+          onClick={() => onClickCart(product)}
+          type="primary"
+          block
+          danger
+          ghost
+          style={{ height: "3rem" }}
+        >
+          Remove from Cart
+        </Button>
+      ) : (
+        <Button
+          type="primary"
+          block
+          style={{ height: "3rem", background: "var( --card-button-color)" }}
+          onClick={() => onClickCart(product)}
+        >
+          Add To Cart
+        </Button>
+      )}
+    </>
   );
 }

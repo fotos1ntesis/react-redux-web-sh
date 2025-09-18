@@ -1,0 +1,19 @@
+@mixin content {
+  background: var(--white-color);
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  padding: 6px 3px;
+  border-radius: 0.2rem;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+.active {
+  color: var(--active-button-f-color);
+  @include content();
+}
+
+.default {
+  color: var(--header-button-f-color);
+  @include content();
+}

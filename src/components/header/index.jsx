@@ -1,34 +1,30 @@
 import { Link } from "react-router-dom";
-import "./../../css/Header.css";
+import { Input } from "antd";
+import styles from "./index.module.scss";
 
 export default function Header({ SearchProductsInput }) {
   return (
-    <header>
-      <div className="header-content">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <h2>WoodMart.</h2>
+    <header className={styles.header}>
+      <div className={styles.content}>
+        <Link to="/" className={styles.logo}>
+          <h2 className={styles.name}>WoodMart.</h2>
         </Link>
-        <div className="search">
-          <input
-            onChange={(e) => SearchProductsInput(e.target.value)}
-            type="text"
+        <div className={styles.search}>
+          <Input.Search
+            style={{ border: "none" }}
             placeholder="Searsh for products"
+            onChange={(e) => SearchProductsInput(e.target.value)}
           />
-          <button className="button-search">
-            <i
-              className="bx bx-search-alt-2 bx-xs"
-              style={{ color: "white" }}
-            ></i>
-          </button>
         </div>
-        <div className="header-buttons">
+
+        <div className={styles.buttons}>
           <Link to="/favorites">
-            <button className="header-button favorite">
+            <button className={styles.button}>
               <i className="bx-favorite bx bxs-heart bx-sm"></i>
             </button>
           </Link>
           <Link to="/cart">
-            <button className="header-button cart">
+            <button className={styles.button}>
               <i className="bx-cart bx bxs-cart-alt bx-sm"></i>
             </button>
           </Link>

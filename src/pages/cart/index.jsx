@@ -1,11 +1,12 @@
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
+import style from "./index.module.scss";
 
 export default function CartPage() {
   const { cartItems } = useSelector((state) => state.cart);
 
   const totalPrice = cartItems.reduce(
-    (acc, product) => acc + product.quantity * product.price,
+    (acc, product) => acc + product.quantity * product.discount,
     0
   );
 
@@ -15,26 +16,28 @@ export default function CartPage() {
   );
 
   return (
-    <div className="cart">
-      <div className="cart-items">
+    <section className={style.page}>
+      <div className={style.products}>
         {cartItems.length ? (
           cartItems.map((el) => <CartItem key={el.id} product={el} />)
         ) : (
-          <span className="notItemsCart">Товаров нет в корзине 🧺</span>
+          <span className={style.notItemsCart}>Товаров нет в корзине 🧺</span>
         )}
       </div>
-      <div className="counter">
-        <div className="info-counter">
-          <p>Your shopping cart: {counterProduct} products</p>
-          <span>Total: ${totalPrice}</span>
+      <div className={style.counter}>
+        <div className={style.blockCounter}>
+          <p className={style.counterProduct}>
+            Your shopping cart: {counterProduct} products
+          </p>
+          <span className={style.totalPrice}>Total: ${totalPrice}</span>
         </div>
         <button
           onClick={() => alert("Access is denied!!")}
-          className="shop-cart"
+          className={style.button}
         >
           Checkout
         </button>
       </div>
-    </div>
+    </section>
   );
 }

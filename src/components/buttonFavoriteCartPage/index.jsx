@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { addToFavorites, deleteFavorites } from "../../pages/favorite/slices";
 
@@ -19,13 +20,9 @@ export default function ButtonFavoriteCartPage({ product }) {
   return (
     <button
       onClick={() => onClickFavorite(product)}
-      className={
-        isFavoriteProduct
-          ? "button-favorite-cart-active"
-          : "button-favorite-cart"
-      }
+      className={isFavoriteProduct ? styles.active : styles.default}
     >
-      <i className="bx-favorite bx bxs-heart bx-xs"></i>
+      <i className="bx bxs-heart bx-xs"></i>
     </button>
   );
 }

@@ -1,0 +1,18 @@
+@mixin content {
+  position: absolute;
+  cursor: pointer;
+  top: 8px;
+  right: 5px;
+  z-index: 5;
+  transition: all 500ms ease;
+}
+
+.active {
+  color: var(--active-button-f-color);
+  @include content();
+}
+
+.default {
+  color: var(--header-button-f-color);
+  @include content();
+}

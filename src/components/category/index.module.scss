@@ -1,0 +1,40 @@
+@mixin justify-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin category {
+  width: 120px;
+  height: 115px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.category {
+  margin: 10px 0;
+  .categoryList {
+    display: flex;
+    gap: 15px;
+    .active {
+      @include justify-content-center();
+      @include category();
+      background: var(--header-bg-color);
+    }
+
+    .default {
+      @include justify-content-center();
+      @include category();
+      background: var(--white-color);
+    }
+
+    span {
+      @include justify-content-center();
+      flex-direction: column;
+      gap: 4px;
+      .name {
+        font-size: 0.6rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

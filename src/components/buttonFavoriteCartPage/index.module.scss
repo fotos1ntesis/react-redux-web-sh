@@ -1,0 +1,17 @@
+@mixin content {
+  width: 4%;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  transition: all 500ms ease;
+  border-radius: 0.2rem;
+}
+
+.active {
+  @include content();
+  color: var(--active-button-f-color);
+}
+
+.default {
+  @include content();
+}

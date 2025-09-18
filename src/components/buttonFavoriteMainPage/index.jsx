@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.module.scss";
 import { addToFavorites, deleteFavorites } from "../../pages/favorite/slices";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -17,9 +18,7 @@ export default function ButtonFavoriteMainPage({ product }) {
   };
   return (
     <div
-      className={
-        isFavoriteProduct ? "button-favorite-active" : "button-favorite"
-      }
+      className={isFavoriteProduct ? styles.active : styles.default}
       onClick={() => onClickFavorite(product)}
     >
       <i className="bx bxs-heart bx-sm"></i>

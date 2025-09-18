@@ -1,0 +1,43 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+
+  .product {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 245px;
+    margin: 5.5px 5.5px 0 5.5px;
+    padding: 0 0.8rem 0.8rem;
+    background-color: var(--white-color);
+    border-radius: 0.2rem;
+    .description {
+      font-size: 0.8rem;
+      color: var(--header-text-color);
+    }
+    
+    .priceblock {
+      display: flex;
+      gap: 6px;
+      font-weight: 500;
+      font-size: 0.8rem;
+
+      .price {
+        color: var(--price-color);
+      }
+
+      .discount {
+        color: var(--discount-color);
+      }
+    }
+
+    .rating {
+      gap: 2px;
+      display: flex;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  }
+}

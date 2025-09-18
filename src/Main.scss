@@ -8,11 +8,9 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
+main {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 body {
@@ -37,14 +35,30 @@ body {
   --active-button-f-color: #f45e5e;
   --counter-color: #f7f7f7;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 button {
   cursor: pointer;
   border: none;
   outline: none;
+  background: none;
 }
 
-input {
-  border: none;
-  outline: none;
+// Кнопки на главной странице в header
+.bx-cart {
+  color: var(--header-button-color);
+  transition: all 500ms ease;
+  &:hover {
+    color: var(--header-search-button-color);
+  }
+}
+.bx-favorite {
+  color: var(--header-button-color);
+  transition: all 500ms ease;
+  &:hover {
+    color: var(--header-button-f-color);
+  }
 }

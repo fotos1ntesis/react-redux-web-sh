@@ -1,4 +1,4 @@
-import "../../css/ProductPage.css";
+import style from "./index.module.scss";
 
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -26,27 +26,27 @@ export default function ProductPage() {
     product;
 
   return (
-    <div className="productpage">
+    <section className={style.page}>
       <img width={420} height={550} src={img} alt={name} />
-      <div className="product_">
-        <div className="info-block-product">
+      <div className={style.product}>
+        <div className={style.blockProduct}>
           <h1>{name}</h1>
-          <span className="description">{description}</span>
-          <p className="descriptionpro">{descriptionpro}</p>
-          <div className="rating">
+          <span className={style.topDescription}>{description}</span>
+          <p className={style.bottomDescription}>{descriptionpro}</p>
+          <div className={style.rating}>
             <i className="bx bxs-star" style={{ color: "orange" }}></i>
             {rating}
           </div>
-          <div className="price">
-            <s className="price_">${price}</s>
-            <span className="discount">${discount}</span>
+          <div className={style.blockPrice}>
+            <s className={style.price}>${price}</s>
+            <span className={style.discount}>${discount}</span>
           </div>
         </div>
-        <div className="butns-product-page">
+        <div className={style.buttons}>
           <ButtonCart product={product} />
           <ButtonFavorite product={product} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,0 +1,54 @@
+.page {
+  margin: auto 0;
+  background: #ffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90dvh;
+  align-items: flex-start;
+  .product {
+    margin-top: 100px;
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+
+    .blockProduct {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .topDescription,
+      .rating {
+        font-weight: 500;
+      }
+
+      .bottomDescription {
+        width: 100%;
+        text-align: justify;
+        color: var(--header-text-color);
+        font-size: 0.9rem;
+      }
+
+      .blockPrice {
+        display: flex;
+        gap: 10px;
+        font-weight: 500;
+        .price {
+          color: var(--price-color);
+        }
+
+        .discount {
+          color: var(--discount-color);
+        }
+      }
+    }
+
+    .buttons {
+      align-items: center;
+      display: flex;
+      gap: 5px;
+      justify-content: space-between;
+    }
+  }
+}
