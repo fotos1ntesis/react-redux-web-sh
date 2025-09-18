@@ -66,6 +66,33 @@
       "quantity": 1
     }
   ],
-  "favorites": [],
+  "favorites": [
+    {
+      "id": 1,
+      "category": "Smartphone",
+      "brend": "Apple",
+      "img": "https://ir.ozone.ru/s3/multimedia-1-w/wc1000/7669894640.jpg",
+      "name": "iPhone 16 Pro",
+      "description": "Apple iPhone 16 Pro, eSIM+SIM 8/256 ГБ, gray",
+      "descriptionpro": "The Apple iPhone 16 Pro in a natural gray case with 256 GB of memory is a powerful and stylish flagship. It is equipped with an advanced camera system, a bright OLED screen and the fastest Apple A18 Bionic processor for flawless operation.",
+      "rating": 4.9,
+      "price": 1252,
+      "discount": 438,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "category": "Smartphone",
+      "brend": "Apple",
+      "img": "https://ir.ozone.ru/s3/multimedia-1-9/wc1000/7422689529.jpg",
+      "name": "iPhone 16 Pro",
+      "description": "Apple iPhone 16 Pro, eSIM+SIM 8/256 ГБ, golden",
+      "descriptionpro": "The Apple iPhone 16 Pro in a natural golden case with 256 GB of memory is a powerful and stylish flagship. It is equipped with an advanced camera system, a bright OLED screen and the fastest Apple A18 Bionic processor for flawless operation.",
+      "rating": 4.8,
+      "price": 1352,
+      "discount": 448,
+      "quantity": 1
+    }
+  ],
   "cart": []
 }
